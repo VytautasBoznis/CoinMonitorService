@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMonitor.Business", "Coi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMonitor.Domain", "CoinMonitor.Domain\CoinMonitor.Domain.csproj", "{36E1189C-75DD-422A-B51B-F726B33F6509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMonitor.Base", "CoinMonitor.Base\CoinMonitor.Base.csproj", "{8A4A2939-B88B-47BF-87D6-036C0D73F6C1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMonitor.Interfaces", "CoinMonitor.Interfaces\CoinMonitor.Interfaces.csproj", "{97003B38-1E2E-4B8B-BF13-98D27CCB4838}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMonitor.RestClients", "CoinMonitor.RestClients\CoinMonitor.RestClients.csproj", "{F5399CE1-8074-4A2B-8EA5-EE9717AD9874}"
@@ -33,10 +31,6 @@ Global
 		{36E1189C-75DD-422A-B51B-F726B33F6509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36E1189C-75DD-422A-B51B-F726B33F6509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36E1189C-75DD-422A-B51B-F726B33F6509}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8A4A2939-B88B-47BF-87D6-036C0D73F6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A4A2939-B88B-47BF-87D6-036C0D73F6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A4A2939-B88B-47BF-87D6-036C0D73F6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A4A2939-B88B-47BF-87D6-036C0D73F6C1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{97003B38-1E2E-4B8B-BF13-98D27CCB4838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97003B38-1E2E-4B8B-BF13-98D27CCB4838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97003B38-1E2E-4B8B-BF13-98D27CCB4838}.Release|Any CPU.ActiveCfg = Release|Any CPU

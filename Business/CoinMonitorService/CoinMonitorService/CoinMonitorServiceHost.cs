@@ -1,4 +1,6 @@
-﻿using CoinMonitor.Base.Service;
+﻿using CoinMonitor.Business.Operations.CoinOperations;
+using CoinMonitor.Domain.Messages.Wcf;
+using CoinMonitorService.Base;
 
 namespace CoinMonitorService
 {
@@ -11,7 +13,10 @@ namespace CoinMonitorService
 
 		protected override void OnStart(string[] args)
 		{
-			Logger.DebugFormat($"Starting service");
+			Logger.DebugFormat($"Starting service"); 
+			
+			GetCoinPairsRequest request = new GetCoinPairsRequest();
+			new GetCoinPairsOperation().Excecute(request);
 
 		}
 

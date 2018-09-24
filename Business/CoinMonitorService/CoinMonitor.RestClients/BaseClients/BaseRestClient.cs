@@ -18,7 +18,7 @@ namespace CoinMonitor.RestClients.BaseClients
 			Client = new RestClient(apiUrl);
 		}
 
-		public RestRequest HandleRequest(string requestUrl, BaseRequest request, Method method, Dictionary<string, string> urlParameterDictionary = null)
+		public RestRequest HandleRequest(string requestUrl, BaseRestRequest request, Method method, Dictionary<string, string> urlParameterDictionary = null)
 		{
 			RestRequest restRequest = new RestRequest(requestUrl, method);
 			restRequest.AddBody(request);
@@ -35,7 +35,7 @@ namespace CoinMonitor.RestClients.BaseClients
 			return restRequest;
 		}
 		
-		public IRestResponse<T> HandleResponse<T>(IRestResponse<T> response) where T: BaseResponse
+		public IRestResponse<T> HandleResponse<T>(IRestResponse<T> response) where T: BaseRestResponse
 		{
 			_logger.DebugFormat($"Rest response url {response.ResponseUri} body content {response.Content}");
 			return response;

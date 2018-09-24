@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\build\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Build\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -59,9 +59,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CoinMonitor.Base\CoinMonitor.Base.csproj">
-      <Project>{8a4a2939-b88b-47bf-87d6-036c0d73f6c1}</Project>
-      <Name>CoinMonitor.Base</Name>
+    <ProjectReference Include="..\CoinMonitor.Business\CoinMonitor.Business.csproj">
+      <Project>{64421876-9509-47DC-94E6-CD6E86114567}</Project>
+      <Name>CoinMonitor.Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\CoinMonitor.Domain\CoinMonitor.Domain.csproj">
       <Project>{36e1189c-75dd-422a-b51b-f726b33f6509}</Project>
