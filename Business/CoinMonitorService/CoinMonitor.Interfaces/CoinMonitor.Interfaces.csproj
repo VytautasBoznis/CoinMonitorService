@@ -43,6 +43,8 @@
     <Compile Include="OutsideApiManagers\IBaseOutsideApiManager.cs" />
     <Compile Include="OutsideApiManagers\ICexApiManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceHolders\IMarketWatchHolder.cs" />
+    <Compile Include="ServiceHolders\IServiceHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DatabaseManagers\" />
