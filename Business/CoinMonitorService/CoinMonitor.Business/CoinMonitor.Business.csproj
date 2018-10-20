@@ -45,8 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\Base\MarketWatchManager.cs" />
-    <Compile Include="Managers\CexMarketManager.cs" />
-    <Compile Include="Managers\PoloniexMarketManager.cs" />
+    <Compile Include="Managers\Database\ElasticDatabaseManager.cs" />
+    <Compile Include="Managers\Market\CexMarketManager.cs" />
+    <Compile Include="Managers\Market\PoloniexMarketManager.cs" />
     <Compile Include="Operations\Base\BaseOperation.cs" />
     <Compile Include="Operations\CoinOperations\GetCoinPairsOperation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

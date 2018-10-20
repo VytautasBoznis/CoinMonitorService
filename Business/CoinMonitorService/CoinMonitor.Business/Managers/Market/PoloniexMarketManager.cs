@@ -4,7 +4,7 @@ using CoinMonitor.Core.Providers;
 using CoinMonitor.Interfaces.OutsideApiManagers;
 using CoinMonitor.RestClients.Clients;
 
-namespace CoinMonitor.Business.Managers
+namespace CoinMonitor.Business.Managers.Market
 {
 	public class PoloniexMarketManager: MarketWatchManager, IPoloniexApiManager
 	{

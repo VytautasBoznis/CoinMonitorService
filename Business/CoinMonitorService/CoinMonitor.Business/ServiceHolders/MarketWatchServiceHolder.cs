@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using CoinMonitor.Business.Managers;
+using CoinMonitor.Business.Managers.Market;
 using CoinMonitor.Core.Holders;
 using CoinMonitor.Core.Providers;
 using CoinMonitor.Interfaces.OutsideApiManagers;

@@ -3,7 +3,7 @@ using CoinMonitor.Core.Holders;
 using CoinMonitor.Core.Providers;
 using CoinMonitor.RestClients.Clients;
 
-namespace CoinMonitor.Business.Managers
+namespace CoinMonitor.Business.Managers.Market
 {
 	public class CexMarketManager: MarketWatchManager
 	{
