@@ -2,7 +2,7 @@
 using System.Configuration;
 using log4net;
 
-namespace CoinMonitor.Business.Providers
+namespace CoinMonitor.Core.Providers
 {
 	public class ConfigurationProvider
 	{

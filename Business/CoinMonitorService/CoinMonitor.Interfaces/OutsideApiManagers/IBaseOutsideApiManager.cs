@@ -2,9 +2,7 @@
 {
 	public interface IBaseOutsideApiManager
 	{
-		void GetPayrData();
-		void GetPayrHistory();
-		void PlacePayrOrder();
-		void CancelPayrOrder();
+		void GetMarketData();
+		void GetPairHistory();
 	}
 }

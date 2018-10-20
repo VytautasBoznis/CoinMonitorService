@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using log4net;
 
-namespace CoinMonitor.Base.Operations
+namespace CoinMonitor.Core.Timers
 {
 	public class OperationTimer: IDisposable
 	{

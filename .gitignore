@@ -168,3 +168,5 @@ Business/CoinMonitorService/CoinMonitor.Domain/bin/Debug/CoinMonitor.Domain.dll
 Business/CoinMonitorService/build/logs/CoinMonitorService.log20180924
 /Business/CoinMonitorService/build
 /Business/CoinMonitorService/packages
+/Business/CoinMonitorService/CoinMonitor.Core/bin/Debug
+/Business/CoinMonitorService/CoinMonitor.Core/obj/Debug

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using CoinMonitor.Base.Operations;
+using CoinMonitor.Core.Timers;
 using CoinMonitor.Domain.Messages.CexApi;
 using CoinMonitor.Interfaces.OutsideApiManagers;
 using CoinMonitor.RestClients.BaseClients;
@@ -10,11 +10,11 @@ namespace CoinMonitor.RestClients.Clients
 {
 	public class CexApiClient: BaseRestClient, ICexApiManager
 	{
-		public CexApiClient() : base("https://cex.io/api")
+		public CexApiClient(string apiUrl) : base(apiUrl)
 		{
 		}
 
-		public PriceStatsResponse PriseStats(string symbol1, string symbol2, PriceStatsRequest request)
+		public PriceStatsResponse PriceStats(string symbol1, string symbol2, PriceStatsRequest request)
 		{
 			using (new OperationTimer(this.GetType(), System.Reflection.MethodBase.GetCurrentMethod().Name))
 			{

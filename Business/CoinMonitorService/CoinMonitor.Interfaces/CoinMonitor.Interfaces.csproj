@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="OutsideApiManagers\IBaseOutsideApiManager.cs" />
     <Compile Include="OutsideApiManagers\ICexApiManager.cs" />
+    <Compile Include="OutsideApiManagers\IPoloniexApiManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceHolders\IMarketWatchHolder.cs" />
     <Compile Include="ServiceHolders\IServiceHolder.cs" />
@@ -49,7 +50,6 @@
   <ItemGroup>
     <Folder Include="DatabaseManagers\" />
     <Folder Include="EconomyManagers\" />
-    <Folder Include="SchedulingManagers\" />
     <Folder Include="ServiceOperationManagers\" />
   </ItemGroup>
   <ItemGroup>

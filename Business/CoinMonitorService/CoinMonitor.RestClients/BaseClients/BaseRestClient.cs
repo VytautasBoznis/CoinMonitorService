@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using CoinMonitor.Domain.Messages.Base;
-using CoinMonitor.Domain.Messages.CexApi;
 using log4net;
 using RestSharp;
 
