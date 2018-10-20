@@ -18,23 +18,25 @@ namespace CoinMonitor.Business.ServiceHolders
 		{
 			Logger.DebugFormat($"MarketWatchServiceHolder ONLINE");
 			LoadConfigs();
-			
-			//MarketSynchTimer = new Timer(e =>
-			//{
-			//	MarketSynch();
-			//}, null, _zeroTimespan, _marketSynchTimespan);
 
-			//PriceSynchTimer = new Timer(e =>
-			//{
-			//	PriceSynch();
-			//}, null, _zeroTimespan, _pairSynchTimespan);
+			MarketSynchTimer = new Timer(e =>
+			{
+				MarketSynch();
+			}, null, _zeroTimespan, _marketSynchTimespan);
+
+			PriceSynchTimer = new Timer(e =>
+			{
+				PriceSynch();
+			}, null, _zeroTimespan, _pairSynchTimespan);
 
 		}
 
 		public void Stop()
 		{
-			//MarketSynchTimer.Dispose();
-			//PriceSynchTimer.Dispose();
+			MarketSynchTimer.Dispose();
+			PriceSynchTimer.Dispose();
+
+			Logger.DebugFormat($"All timers disposed");
 		}
 
 		public void MarketSynch()
@@ -44,7 +46,7 @@ namespace CoinMonitor.Business.ServiceHolders
 
 		public void PriceSynch()
 		{
-			Logger.DebugFormat($"Market synch");
+			Logger.DebugFormat($"Price synch");
 		}
 
 		#region Private methods
