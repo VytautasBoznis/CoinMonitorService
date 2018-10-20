@@ -18,22 +18,23 @@ namespace CoinMonitor.Business.ServiceHolders
 		{
 			Logger.DebugFormat($"MarketWatchServiceHolder ONLINE");
 			LoadConfigs();
+			
+			//MarketSynchTimer = new Timer(e =>
+			//{
+			//	MarketSynch();
+			//}, null, _zeroTimespan, _marketSynchTimespan);
 
-			MarketSynchTimer = new Timer(e =>
-			{
-				MarketSynch();
-			}, null, _zeroTimespan, _marketSynchTimespan);
+			//PriceSynchTimer = new Timer(e =>
+			//{
+			//	PriceSynch();
+			//}, null, _zeroTimespan, _pairSynchTimespan);
 
-			PriceSynchTimer = new Timer(e =>
-			{
-				PriceSynch();
-			}, null, _zeroTimespan, _pairSynchTimespan);
 		}
 
 		public void Stop()
 		{
-			MarketSynchTimer.Dispose();
-			PriceSynchTimer.Dispose();
+			//MarketSynchTimer.Dispose();
+			//PriceSynchTimer.Dispose();
 		}
 
 		public void MarketSynch()
@@ -50,8 +51,8 @@ namespace CoinMonitor.Business.ServiceHolders
 
 		private void LoadConfigs()
 		{
-			_pairSynchTimespan = ConfigurationProvider.GetConfigurationByName(ConfigurationNameHolder.PairSynchTimeSeconds, TimeSpan.Parse("10"));
-			_marketSynchTimespan = ConfigurationProvider.GetConfigurationByName(ConfigurationNameHolder.MarketSynchTimeSeconds, TimeSpan.Parse("60"));
+			_pairSynchTimespan = ConfigurationProvider.GetConfigurationByName(ConfigurationNameHolder.PairSynchTimeSpan, TimeSpan.Parse("0:0:10"));
+			_marketSynchTimespan = ConfigurationProvider.GetConfigurationByName(ConfigurationNameHolder.MarketSynchTimeSpan, TimeSpan.Parse("0:1:0"));
 		}
 		
 		#endregion

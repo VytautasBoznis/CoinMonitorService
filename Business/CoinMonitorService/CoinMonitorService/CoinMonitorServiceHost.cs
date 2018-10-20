@@ -1,4 +1,5 @@
-﻿using CoinMonitor.Business.ServiceHolders;
+﻿using System;
+using CoinMonitor.Business.ServiceHolders;
 using CoinMonitor.Interfaces.ServiceHolders;
 using CoinMonitorService.Base;
 
@@ -20,19 +21,33 @@ namespace CoinMonitorService
 
 			Logger.DebugFormat($"Initializing holders");
 
-			foreach (IServiceHolder serviceHolder in ServiceHolders)
+			try
 			{
-				serviceHolder.Init();
+				foreach (IServiceHolder serviceHolder in ServiceHolders)
+				{
+					serviceHolder.Init();
+				}
 			}
+			catch (Exception e)
+			{
+				Logger.ErrorFormat($"Error on itialization: {e.Message} stactrace: {e.StackTrace}");
+			}
+			
 		}
 
 		protected override void OnStop()
 		{
 			Logger.DebugFormat($"Stoping holders");
-
-			foreach (IServiceHolder serviceHolder in ServiceHolders)
+			try
 			{
-				serviceHolder.Stop();
+				foreach (IServiceHolder serviceHolder in ServiceHolders)
+				{
+					serviceHolder.Stop();
+				}
+			}
+			catch (Exception e)
+			{
+				Logger.ErrorFormat($"Error on stop: {e.Message} stactrace: {e.StackTrace}");
 			}
 
 			Logger.DebugFormat($"Stoping service");

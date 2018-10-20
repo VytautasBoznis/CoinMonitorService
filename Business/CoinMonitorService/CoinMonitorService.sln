@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMonitor.ServiceHost", "CoinMonitorService\CoinMonitor.ServiceHost.csproj", "{95F86C15-5E8F-4584-AD1A-E9F1077D93AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F5399CE1-8074-4A2B-8EA5-EE9717AD9874} = {F5399CE1-8074-4A2B-8EA5-EE9717AD9874}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinMonitor.Business", "CoinMonitor.Business\CoinMonitor.Business.csproj", "{64421876-9509-47DC-94E6-CD6E86114567}"
 EndProject

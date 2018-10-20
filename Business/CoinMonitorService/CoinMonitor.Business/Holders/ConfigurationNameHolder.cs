@@ -2,7 +2,7 @@
 {
 	public static class ConfigurationNameHolder
 	{
-		public static readonly string PairSynchTimeSeconds = "PairSynchTimeSeconds";
-		public static readonly string MarketSynchTimeSeconds = "MarketSynchTimeSeconds";
+		public static readonly string PairSynchTimeSpan = "PairSynchTimeSpan";
+		public static readonly string MarketSynchTimeSpan = "MarketSynchTimeSpan";
 	}
 }

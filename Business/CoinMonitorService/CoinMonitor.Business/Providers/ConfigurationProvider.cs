@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Configuration;
 using log4net;
-using log4net.Repository.Hierarchy;
 
 namespace CoinMonitor.Business.Providers
 {
