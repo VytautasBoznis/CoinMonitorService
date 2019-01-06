@@ -6,5 +6,6 @@
 		public static readonly string MarketSynchTimeSpan = "MarketSynchTimeSpan";
 		public static readonly string CexApiUrl = "CexApiUrl";
 		public static readonly string PoloniexApiUrl = "PoloniexApiUrl";
+		public static readonly string BinanceApiUrl = "BinanceApiUrl";
 	}
 }

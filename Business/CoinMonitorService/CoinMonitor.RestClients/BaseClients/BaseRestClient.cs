@@ -39,5 +39,11 @@ namespace CoinMonitor.RestClients.BaseClients
 			_logger.DebugFormat($"Rest response url {response.ResponseUri} body content {response.Content}");
 			return response;
 		}
+
+		public IRestResponse<T> HandleGenericResponse<T>(IRestResponse<T> response)
+		{
+			_logger.DebugFormat($"Rest response url {response.ResponseUri} body content {response.Content}");
+			return response;
+		}
 	}
 }

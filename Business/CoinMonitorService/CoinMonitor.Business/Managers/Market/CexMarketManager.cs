@@ -1,7 +1,9 @@
 ﻿using CoinMonitor.Business.Managers.Base;
 using CoinMonitor.Core.Holders;
 using CoinMonitor.Core.Providers;
+using CoinMonitor.Domain.Messages.CexApi;
 using CoinMonitor.RestClients.Clients;
+using Newtonsoft.Json;
 
 namespace CoinMonitor.Business.Managers.Market
 {
@@ -17,7 +19,8 @@ namespace CoinMonitor.Business.Managers.Market
 		//will get all possible market data from the rest client
 		public override void GetMarketData()
 		{
-			Logger.DebugFormat("Trying to get market data from Cex API");
+			CurrencyLimitsResponse response = _cexApiClient.CurrencyLimit();
+			Logger.DebugFormat("Full Cex Response: {0}", JsonConvert.SerializeObject(response));
 		}
 
 		//will get all pair historic data from the rest api client

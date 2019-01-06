@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OutsideApiManagers\IBaseOutsideApiManager.cs" />
+    <Compile Include="OutsideApiManagers\IBinanceApiManager.cs" />
     <Compile Include="OutsideApiManagers\ICexApiManager.cs" />
     <Compile Include="OutsideApiManagers\IPoloniexApiManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

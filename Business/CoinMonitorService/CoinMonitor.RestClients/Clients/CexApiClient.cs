@@ -24,5 +24,15 @@ namespace CoinMonitor.RestClients.Clients
 				return response.Data;
 			}
 		}
+
+		public CurrencyLimitsResponse CurrencyLimit()
+		{
+			using (new OperationTimer(this.GetType(), System.Reflection.MethodBase.GetCurrentMethod().Name))
+			{
+				var restRequest = HandleRequest(CexApiUrlHolder.CurrencyLimits, new BaseCexRequest(), Method.GET);
+				var response = HandleResponse(Client.Execute<CurrencyLimitsResponse>(restRequest));
+				return response.Data;
+			}
+		}
 	}
 }

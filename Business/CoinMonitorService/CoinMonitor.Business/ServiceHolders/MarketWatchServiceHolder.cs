@@ -17,7 +17,7 @@ namespace CoinMonitor.Business.ServiceHolders
 		private TimeSpan _marketSynchTimespan;
 		private Timer MarketSynchTimer { get; set; }
 		private Timer PriceSynchTimer { get; set; }
-		private List<IBaseOutsideApiManager> _marketManagers;
+		private readonly List<IBaseOutsideApiManager> _marketManagers;
 
 		public MarketWatchServiceHolder()
 		{
@@ -56,7 +56,7 @@ namespace CoinMonitor.Business.ServiceHolders
 			{
 				foreach (var manager in _marketManagers)
 				{
-					manager.GetMarketData();
+					new Thread(manager.GetMarketData).Start();
 				}
 			}
 			catch (Exception e)
