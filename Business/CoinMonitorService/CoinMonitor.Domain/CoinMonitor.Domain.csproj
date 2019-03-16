@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\Cex\CoinPairDto.cs" />
     <Compile Include="Dtos\Cex\CurrencyLimitDto.cs" />
     <Compile Include="Dtos\Poloniex\PoloniexCurrencyDto.cs" />
     <Compile Include="Messages\Base\BaseRest.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="Messages\CexApi\BaseCex.cs" />
     <Compile Include="Messages\CexApi\CurrencyLimits.cs" />
     <Compile Include="Messages\CexApi\PriceStats.cs" />
+    <Compile Include="Messages\CexApi\Ticker.cs" />
     <Compile Include="Messages\PoloniexApi\ReturnCurrencies.cs" />
     <Compile Include="Messages\Wcf\GetCoinPairs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

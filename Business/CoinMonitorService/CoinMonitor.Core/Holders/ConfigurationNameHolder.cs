@@ -7,5 +7,6 @@
 		public static readonly string CexApiUrl = "CexApiUrl";
 		public static readonly string PoloniexApiUrl = "PoloniexApiUrl";
 		public static readonly string BinanceApiUrl = "BinanceApiUrl";
+		public static readonly string ElasticApiUrl = "ElasticApiUrl";
 	}
 }

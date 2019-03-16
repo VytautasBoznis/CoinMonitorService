@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseManagers\IDataFormatter.cs" />
+    <Compile Include="DatabaseManagers\IElasticDatabaseClient.cs" />
     <Compile Include="OutsideApiManagers\IBaseOutsideApiManager.cs" />
     <Compile Include="OutsideApiManagers\IBinanceApiManager.cs" />
     <Compile Include="OutsideApiManagers\ICexApiManager.cs" />
@@ -49,7 +51,6 @@
     <Compile Include="ServiceHolders\IServiceHolder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DatabaseManagers\" />
     <Folder Include="EconomyManagers\" />
     <Folder Include="ServiceOperationManagers\" />
   </ItemGroup>

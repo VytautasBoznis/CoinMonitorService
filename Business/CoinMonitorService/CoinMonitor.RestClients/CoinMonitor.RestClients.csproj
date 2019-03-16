@@ -54,7 +54,9 @@
     <Compile Include="Clients\BinanceApiClient.cs" />
     <Compile Include="Clients\CexApiClient.cs" />
     <Compile Include="Clients\PoloniexApiClient.cs" />
+    <Compile Include="DatabaseClient\ElasticDatabaseClient.cs" />
     <Compile Include="Holders\CexApiUrlHolder.cs" />
+    <Compile Include="Holders\ElasticApiUrlHolder.cs" />
     <Compile Include="Holders\PoloniexApiUrlHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
