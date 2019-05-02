@@ -1,4 +1,6 @@
-﻿using CoinMonitor.Domain.Dtos.Cex;
+﻿using System;
+using System.Net;
+using CoinMonitor.Domain.Dtos.Cex;
 using CoinMonitor.Interfaces.DatabaseManagers;
 using CoinMonitor.RestClients.Holders;
 using log4net;
@@ -21,32 +23,33 @@ namespace CoinMonitor.RestClients.DatabaseClient
 		}
 
 
-		public void SaveRawTickerData(string pair, object tickerResponse)
+		public void SaveRawTickerData(string pair, object tickerResponse, Type responseType)
 		{
-			RestRequest request = PrepareSaveRequest(Method.PUT, ElasticApiUrlHolder.DataType.RAW, pair,tickerResponse);
+			RestRequest request = PrepareSaveRequest(Method.POST, ElasticApiUrlHolder.DataType.RAW, pair, tickerResponse, responseType);
 			HandleElasticResponse(_client.Execute(request));
 		}
 
 		#region BaseHandling
 
-		protected RestRequest PrepareSaveRequest(Method method, ElasticApiUrlHolder.DataType dataType, string pairName, object requestData)
+		protected RestRequest PrepareSaveRequest(Method method, ElasticApiUrlHolder.DataType dataType, string pairName, object requestData, Type requestType)
 		{
-			string requestUrl = ElasticApiUrlHolder.GenerateDataPutUrl(_exchangeName, dataType, pairName);
+			string requestUrl = ElasticApiUrlHolder.GenerateDataSaveUrl(_exchangeName, dataType, pairName);
 			RestRequest request = new RestRequest(requestUrl, method);
-			request.AddBody(requestData);
+			request.RequestFormat = DataFormat.Json;
+			request.AddBody(Convert.ChangeType(requestData, requestType));
 
 			return request;
 		}
 
 		protected IRestResponse HandleElasticResponse(IRestResponse response)
 		{
-			if (response.ErrorException != null)
+			if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Created)
 			{
-				_Logger.ErrorFormat($"Error happened trying to save [{_exchangeName.ToString()}] data error: [{response.ErrorException.Message}]");
+				_Logger.DebugFormat($"Elastic save completed for {_exchangeName.ToString()} Method: {response.Request.Method}");
 			}
 			else
 			{
-				_Logger.DebugFormat($"Elastic save completed for {_exchangeName.ToString()} Method: {response.Request.Method}");
+				_Logger.ErrorFormat($"Error happened trying to do action [{_exchangeName.ToString()}] data error: [{response.Content}]");
 			}
 
 			return response;

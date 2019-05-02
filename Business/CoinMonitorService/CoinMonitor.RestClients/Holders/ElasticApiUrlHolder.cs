@@ -1,9 +1,9 @@
-﻿namespace CoinMonitor.RestClients.Holders
+﻿using System;
+
+namespace CoinMonitor.RestClients.Holders
 {
 	public static class ElasticApiUrlHolder
 	{
-		private static string BaseUrl = "CM";
-
 		public enum ExchangeName
 		{
 			CEX,
@@ -17,9 +17,9 @@
 			ECO_INDEX
 		}
 
-		public static string GenerateDataPutUrl(ExchangeName excName, DataType dataType, string pairName)
+		public static string GenerateDataSaveUrl(ExchangeName excName, DataType dataType, string pair)
 		{
-			return BaseUrl + "/" + excName + "/" + dataType + "/" + pairName;
+			return "/" + excName.ToString().ToLower() + "/" + dataType.ToString().ToLower() + "/" + pair.ToLower() + "_" + DateTime.Now.Ticks;
 		}
 	}
 

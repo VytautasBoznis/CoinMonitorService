@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Web;
 using CoinMonitor.Business.Managers.Base;
 using CoinMonitor.Core.Holders;
 using CoinMonitor.Core.Providers;
@@ -45,8 +46,8 @@ namespace CoinMonitor.Business.Managers.Market
 			{
 				Logger.DebugFormat($"Pair ticker for {pair.symbol1} & {pair.symbol2}");
 				TickerResponse response = _cexApiClient.TickPair(pair.symbol1, pair.symbol2);
-				Logger.DebugFormat($"Pair ticker response for {pair.symbol1} & {pair.symbol2} response: {JsonConvert.SerializeObject(response)}");
-				_elasticClient.SaveRawTickerData(GetApiPairName(pair.symbol1, pair.symbol2), response);
+				Logger.DebugFormat(string.Format("Pair ticker response for {0} & {1} response: {2}", pair.symbol1, pair.symbol2, HttpUtility.JavaScriptStringEncode(JsonConvert.SerializeObject(response))));
+				_elasticClient.SaveRawTickerData(GetApiPairName(pair.symbol1, pair.symbol2), response, typeof(TickerResponse));
 			}
 		}
 
