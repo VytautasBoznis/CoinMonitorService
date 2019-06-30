@@ -12,12 +12,12 @@ namespace CoinMonitor.RestClients.Clients
 		public CexApiClient(string apiUrl) : base(apiUrl)
 		{}
 
-		public TickerResponse TickPair(string symbol1, string symbol2)
+		public List<TickerResponse> TickPairs(string symbol1, string symbol2, string symbol3, string symbol4)
 		{
-			Dictionary<string, string> urlParams = new Dictionary<string, string> { {"symbol1", symbol1}, {"symbol2", symbol2}};
+			Dictionary<string, string> urlParams = new Dictionary<string, string> { {"symbol1", symbol1}, { "symbol2", symbol2 }, { "symbol3", symbol3 }, { "symbol4", symbol4 } };
 			var restRequest = HandleRequest(CexApiUrlHolder.TickerUrl, new TickerRequest(), Method.GET, urlParams);
-			var response = HandleGenericResponse(Client.Execute<TickerResponse>(restRequest));
-			return response.Data;
+			var response = HandleGenericResponse(Client.Execute<BaseCexResponse<List<TickerResponse>>>(restRequest));
+			return response.Data.Data;
 		}
 	}
 }

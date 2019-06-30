@@ -42,16 +42,17 @@
   <ItemGroup>
     <Compile Include="DatabaseManagers\IDataFormatter.cs" />
     <Compile Include="DatabaseManagers\IElasticDatabaseClient.cs" />
+    <Compile Include="EconomyManagers\IEcoManager.cs" />
     <Compile Include="OutsideApiManagers\IBaseOutsideApiManager.cs" />
     <Compile Include="OutsideApiManagers\IBinanceApiManager.cs" />
     <Compile Include="OutsideApiManagers\ICexApiManager.cs" />
+    <Compile Include="OutsideApiManagers\ICoinMonitoringApiManager.cs" />
     <Compile Include="OutsideApiManagers\IPoloniexApiManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceHolders\IMarketWatchHolder.cs" />
     <Compile Include="ServiceHolders\IServiceHolder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EconomyManagers\" />
     <Folder Include="ServiceOperationManagers\" />
   </ItemGroup>
   <ItemGroup>

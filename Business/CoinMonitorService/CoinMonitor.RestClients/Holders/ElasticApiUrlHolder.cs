@@ -6,6 +6,7 @@ namespace CoinMonitor.RestClients.Holders
 	{
 		public enum ExchangeName
 		{
+			Test,
 			CEX,
 			POLONIEX
 		}
@@ -13,13 +14,13 @@ namespace CoinMonitor.RestClients.Holders
 		public enum DataType
 		{
 			RAW,
-			SANITIZED,
+			FORMATTED,
 			ECO_INDEX
 		}
 
-		public static string GenerateDataSaveUrl(ExchangeName excName, DataType dataType, string pair)
+		public static string GenerateDataSaveUrl(ExchangeName excName, DataType dataType, string pair, DateTime time)
 		{
-			return "/" + excName.ToString().ToLower() + "/" + dataType.ToString().ToLower() + "/" + pair.ToLower() + "_" + DateTime.Now.Ticks;
+			return "/" + excName.ToString().ToLower() + "_" + dataType.ToString().ToLower() + "/" + excName.ToString().ToLower() + "/" + pair.ToLower() + "_" + time.Ticks;
 		}
 	}
 

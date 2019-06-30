@@ -2,6 +2,6 @@
 {
 	public static class PoloniexApiUrlHolder
 	{
-		public const string ReturnCurrencies = "public?command=returnCurrencies";
+		public const string ReturnCurrencies = "public?command=returnTicker";
 	}
 }

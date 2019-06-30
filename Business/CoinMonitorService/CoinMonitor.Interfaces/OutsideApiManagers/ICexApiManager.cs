@@ -1,9 +1,10 @@
-﻿using CoinMonitor.Domain.Messages.CexApi;
+﻿using System.Collections.Generic;
+using CoinMonitor.Domain.Messages.CexApi;
 
 namespace CoinMonitor.Interfaces.OutsideApiManagers
 {
 	public interface ICexApiManager
 	{
-		TickerResponse TickPair(string symbol1, string symbol2);
+		List<TickerResponse> TickPairs(string symbol1, string symbol2, string symbol3, string symbol4);
 	}
 }

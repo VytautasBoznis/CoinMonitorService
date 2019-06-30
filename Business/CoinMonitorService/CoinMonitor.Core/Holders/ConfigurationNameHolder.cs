@@ -8,5 +8,6 @@
 		public static readonly string PoloniexApiUrl = "PoloniexApiUrl";
 		public static readonly string BinanceApiUrl = "BinanceApiUrl";
 		public static readonly string ElasticApiUrl = "ElasticApiUrl";
+		public static readonly string CoinMonitoringApi = "CoinMonitoringApi";
 	}
 }

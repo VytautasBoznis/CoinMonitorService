@@ -42,19 +42,51 @@
   <ItemGroup>
     <Compile Include="Dtos\Cex\CoinPairDto.cs" />
     <Compile Include="Dtos\Cex\CurrencyLimitDto.cs" />
+    <Compile Include="Dtos\EcoIndex\EcoIndex.cs" />
+    <Compile Include="Dtos\EcoIndex\Formatting\TickerResponseFormattedDto.cs" />
+    <Compile Include="Dtos\EcoIndex\TickerFormattedDto.cs" />
+    <Compile Include="Dtos\Elastic\ElasticBool.cs" />
+    <Compile Include="Dtos\Elastic\ElasticEcoQuery.cs" />
+    <Compile Include="Dtos\Elastic\ElasticFilter.cs" />
+    <Compile Include="Dtos\Elastic\ElasticFormattedBool.cs" />
+    <Compile Include="Dtos\Elastic\ElasticFormattedFilter.cs" />
+    <Compile Include="Dtos\Elastic\ElasticFormattedMustFilter.cs" />
+    <Compile Include="Dtos\Elastic\ElasticFormattedQuery.cs" />
+    <Compile Include="Dtos\Elastic\ElasticFormattedShouldFilter.cs" />
+    <Compile Include="Dtos\Elastic\ElasticHits.cs" />
+    <Compile Include="Dtos\Elastic\ElasticHitWrapper.cs" />
+    <Compile Include="Dtos\Elastic\ElasticMultiRequest.cs" />
+    <Compile Include="Dtos\Elastic\ElasticMust.cs" />
+    <Compile Include="Dtos\Elastic\ElasticMustFilter.cs" />
+    <Compile Include="Dtos\Elastic\ElasticMustName.cs" />
+    <Compile Include="Dtos\Elastic\ElasticMustPair.cs" />
+    <Compile Include="Dtos\Elastic\ElasticRange.cs" />
+    <Compile Include="Dtos\Elastic\ElasticRangeParameter.cs" />
+    <Compile Include="Dtos\Elastic\ElasticRecordWrapper.cs" />
+    <Compile Include="Dtos\Elastic\ElasticQuery.cs" />
+    <Compile Include="Dtos\Elastic\ElasticSearchRequest.cs" />
+    <Compile Include="Dtos\Elastic\ElasticItemResponse.cs" />
+    <Compile Include="Dtos\Elastic\ElasticSingleRequest.cs" />
+    <Compile Include="Dtos\Elastic\ElasticSort.cs" />
+    <Compile Include="Dtos\Elastic\ElasticTermExchangeNr.cs" />
+    <Compile Include="Dtos\Elastic\ElasticTermId.cs" />
+    <Compile Include="Dtos\Elastic\ElasticTimeSort.cs" />
     <Compile Include="Dtos\Poloniex\PoloniexCurrencyDto.cs" />
+    <Compile Include="Enums\EcoIndexEnum.cs" />
+    <Compile Include="Enums\ExchangeTypeEnum.cs" />
+    <Compile Include="Enums\ExchangePairTypeEnum.cs" />
     <Compile Include="Messages\Base\BaseRest.cs" />
     <Compile Include="Messages\Base\BaseWcf.cs" />
     <Compile Include="Messages\CexApi\BaseCex.cs" />
     <Compile Include="Messages\CexApi\CurrencyLimits.cs" />
     <Compile Include="Messages\CexApi\PriceStats.cs" />
     <Compile Include="Messages\CexApi\Ticker.cs" />
+    <Compile Include="Messages\Elastic\GetFormattedData.cs" />
     <Compile Include="Messages\PoloniexApi\ReturnCurrencies.cs" />
     <Compile Include="Messages\Wcf\GetCoinPairs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Enums\" />
     <Folder Include="Messages\Rest\" />
     <Folder Include="OperationMessages\" />
   </ItemGroup>
